@@ -1,0 +1,203 @@
+<TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent" android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    tools:context="com.example.kristine.badgeapp.AvailableBadges"
+    android:weightSum="1">
+
+
+    <TableRow
+        android:id="@+id/tblRowAvailable"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:text="Available Badges"
+            android:id="@+id/txtViewAvailableBdg"
+            android:layout_column="1"
+            android:layout_gravity="center_horizontal" />
+    </TableRow>
+
+    <TableRow
+        android:id="@+id/tblRowCommunityBdg"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent">
+
+        <ImageView
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:id="@+id/imgCommunity"
+            android:background="@drawable/community"
+            android:baselineAlignBottom="false" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="Community Service"
+            android:id="@+id/txtViewCommunity"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="20dp"
+            android:textStyle="italic" />
+
+    </TableRow>
+
+    <TableRow
+        android:id="@+id/tblRowDescCommunity"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent">
+
+        <Button
+            style="?android:attr/buttonStyleSmall"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Add"
+            android:id="@+id/btnAddCommunity"
+            android:layout_column="0"
+            android:width="5dp"
+            android:textSize="10dp" />
+
+        <TextView
+            style="?android:attr/textAppearanceSmall"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Complete any community service to earn this badge!"
+            android:id="@+id/txtViewDescCommunity"
+            android:layout_column="1"
+            android:width="90dp"
+            android:layout_weight="1"
+            android:layout_gravity="center_vertical"
+            android:textSize="10dp" />
+
+    </TableRow>
+
+    <TableRow
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent">
+
+        <ImageView
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:id="@+id/imgAcademicAward"
+            android:layout_column="0"
+            android:background="@drawable/academicaward" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="Academic Award"
+            android:id="@+id/txtViewAcademicAward"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="20dp"
+            android:textStyle="italic"
+            android:layout_column="1" />
+    </TableRow>
+
+    <TableRow
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent">
+
+        <Button
+            style="?android:attr/buttonStyleSmall"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Add"
+            android:id="@+id/btnAddAcademicAward"
+            android:layout_column="0"
+            android:width="5dp"
+            android:textSize="10dp" />
+
+        <TextView
+            style="?android:attr/textAppearanceSmall"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Complete any academic award to earn this badge!"
+            android:id="@+id/txtViewAcademicDesc"
+            android:layout_column="1"
+            android:width="90dp"
+            android:layout_weight="1"
+            android:layout_gravity="center_vertical"
+            android:textSize="10dp" />
+    </TableRow>
+
+    <TableRow
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent">
+
+        <ImageView
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:id="@+id/imgDeansList"
+            android:layout_column="0"
+            android:background="@drawable/deanslist" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="Dean&apos;s List"
+            android:id="@+id/txtViewDeanList"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="20dp"
+            android:textStyle="italic"
+            android:layout_column="1" />
+    </TableRow>
+
+    <TableRow
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent">
+
+        <Button
+            style="?android:attr/buttonStyleSmall"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Add"
+            android:id="@+id/btnAddDeansList"
+            android:layout_column="0"
+            android:width="5dp"
+            android:textSize="10dp" />
+
+        <TextView
+            style="?android:attr/textAppearanceSmall"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Be placed on the Dean&apos;s List to earn this badge!"
+            android:id="@+id/txtViewDeanListDesc"
+            android:layout_column="1"
+            android:width="90dp"
+            android:layout_weight="1"
+            android:layout_gravity="center_vertical"
+            android:textSize="10dp" />
+    </TableRow>
+
+    <TableRow
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"></TableRow>
+
+    <TableRow
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"></TableRow>
+
+    <TableRow
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"></TableRow>
+
+    <TableRow
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent">
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Next"
+            android:id="@+id/btnNextAvailableBdg"
+            android:layout_column="1" />
+    </TableRow>
+
+</TableLayout>

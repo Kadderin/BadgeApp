@@ -12,14 +12,6 @@
             style="?android:attr/buttonStyleSmall"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/btnHome"
-            android:onClick="btnAvailableBadges"
-            android:id="@+id/btnHome" />
-
-        <Button
-            style="?android:attr/buttonStyleSmall"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
             android:text="@string/btnYourBadge"
             android:id="@+id/btnYourBadges" />
 
