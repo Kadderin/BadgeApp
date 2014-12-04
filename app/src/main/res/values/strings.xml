@@ -10,5 +10,7 @@
     <string name="txtViewUserName">User Name:</string>
     <string name="txtViewPassword">Password:</string>
     <string name="btnSubmit">Submit</string>
+    <string name="title_activity_your_badges">YourBadges</string>
+    <string name="txtViewAvailable">Available Badges</string>
 
 </resources>
