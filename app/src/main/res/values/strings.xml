@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">BadgeApp</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+    <string name="btnHome">Home</string>
+    <string name="btnYourBadge">Your Badges</string>
+    <string name="btnAvailableBdg">Available Badges</string>
+    <string name="txtViewUserName">User Name:</string>
+    <string name="txtViewPassword">Password:</string>
+    <string name="btnSubmit">Submit</string>
+
+</resources>
