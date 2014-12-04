@@ -5,6 +5,8 @@ import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
 import  android.content.Intent;
+import android.view.View;
+import android.widget.Button;
 
 
 public class AvailableBadges extends Activity {
@@ -13,7 +15,21 @@ public class AvailableBadges extends Activity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_available_badges);
-        Intent intent = getIntent();
+
+        //Intent intent = getIntent();
+        Button btn = (Button) findViewById(R.id.btnNextAvailableBdg);
+        btn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                btnNextAvailableBdg(view);
+            }
+        });
+    }
+
+    public void btnNextAvailableBdg (View view) {
+
+        Intent intent = new Intent(this, AvailableBadgesPg2.class);
+        startActivity(intent);
     }
 
 

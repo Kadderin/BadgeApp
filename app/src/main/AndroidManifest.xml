@@ -17,8 +17,12 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".AvailableBadges"
+            android:name="com.example.kristine.badgeapp.AvailableBadges"
             android:label="@string/title_activity_your_badges" >
+        </activity>
+        <activity
+            android:name="com.example.kristine.badgeapp.AvailableBadgesPg2"
+            android:label="@string/title_activity_available_badges_pg2" >
         </activity>
     </application>
 

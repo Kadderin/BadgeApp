@@ -1,42 +1,42 @@
 package com.example.kristine.badgeapp;
 
 import android.app.Activity;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
-import android.content.Intent;
 import android.view.View;
 import android.widget.Button;
 
-public class MainActivity extends Activity {
 
-
-
+public class AvailableBadgesPg2 extends Activity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+        //Intent intent = getIntent();
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
-        Button btn = (Button) findViewById(R.id.btnAvailableBdg);
+        setContentView(R.layout.activity_available_badges_pg2);
+
+        Button btn = (Button) findViewById(R.id.btnBackAvailableBdg2);
         btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                btnAvailableBadges(view);
+                btnBackAvailableBdg2(view);
             }
         });
     }
 
-    /** Called when the user clicks the availableBdg button */
-    public void btnAvailableBadges (View view) {
+    public void btnBackAvailableBdg2 (View view) {
 
         Intent intent = new Intent(this, AvailableBadges.class);
         startActivity(intent);
     }
 
+
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
-        getMenuInflater().inflate(R.menu.menu_main, menu);
+        getMenuInflater().inflate(R.menu.menu_available_badges_pg2, menu);
         return true;
     }
 
@@ -54,6 +54,4 @@ public class MainActivity extends Activity {
 
         return super.onOptionsItemSelected(item);
     }
-
-
 }
