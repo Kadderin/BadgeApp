@@ -15,10 +15,18 @@ public class AvailableBadges extends Activity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_available_badges);
-
         //Intent intent = getIntent();
+        Button btnMyBadges = (Button) findViewById(R.id.btnMyBadges);
         Button btnNext = (Button) findViewById(R.id.btnNextAvailableBdg);
         Button btnCommunity = (Button) findViewById(R.id.btnAddCommunity);
+
+        btnMyBadges.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                btnGoToMyBadges(view);
+            }
+        });
+
         btnNext.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -33,7 +41,10 @@ public class AvailableBadges extends Activity {
             }
         });
         }
-
+    public  void btnGoToMyBadges(View view){
+        Intent intent = new Intent(this,YourBadges.class);
+        startActivity(intent);
+    }
     public void btnAddCommunity (View view){
 
         Intent intent = new Intent(this, YourBadges.class);

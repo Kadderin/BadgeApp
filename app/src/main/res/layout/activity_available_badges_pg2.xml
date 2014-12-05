@@ -141,8 +141,8 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textAppearance="?android:attr/textAppearanceMedium"
-            android:text="Graduation"
-            android:id="@+id/txtViewGraduation"
+            android:text="Dean&apos;s List"
+            android:id="@+id/txtViewDeanList"
             android:layout_gravity="center_vertical"
             android:layout_marginLeft="20dp"
             android:textStyle="italic"
@@ -158,7 +158,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Add"
-            android:id="@+id/btnAddGraduation"
+            android:id="@+id/btnAddDeansList"
             android:layout_column="0"
             android:width="5dp"
             android:textSize="10dp" />
@@ -167,8 +167,8 @@
             style="?android:attr/textAppearanceSmall"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Graduate with a degree to earn this badge!"
-            android:id="@+id/txtViewGraduationDesc"
+            android:text="Be placed on the Dean&apos;s List to earn this badge!"
+            android:id="@+id/txtViewDeanListDesc"
             android:layout_column="1"
             android:width="90dp"
             android:layout_weight="1"
@@ -195,9 +195,19 @@
         <Button
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:text="My Badges"
+            android:id="@+id/btnMyBadges"
+            android:layout_column="1"
+            android:width="50dp"
+            android:maxWidth="20dp"
+            android:layout_span="0" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
             android:text="Back"
             android:id="@+id/btnBackAvailableBdg2"
-            android:layout_column="1" />
+            android:layout_column="4" />
     </TableRow>
 
 </TableLayout>

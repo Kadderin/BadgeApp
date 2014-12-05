@@ -72,6 +72,7 @@ public class MainActivity extends Activity {
                     findViewById(R.id.btnSubmit).setVisibility(view.GONE);
 
                     findViewById(R.id.btnYourBadges).setEnabled(true);
+                    findViewById(R.id.btnAvailableBdg).setEnabled(true);
 
                 }
 
