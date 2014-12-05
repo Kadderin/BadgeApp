@@ -17,13 +17,27 @@ public class AvailableBadges extends Activity {
         setContentView(R.layout.activity_available_badges);
 
         //Intent intent = getIntent();
-        Button btn = (Button) findViewById(R.id.btnNextAvailableBdg);
-        btn.setOnClickListener(new View.OnClickListener() {
+        Button btnNext = (Button) findViewById(R.id.btnNextAvailableBdg);
+        Button btnCommunity = (Button) findViewById(R.id.btnAddCommunity);
+        btnNext.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 btnNextAvailableBdg(view);
             }
         });
+
+        btnCommunity.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                btnAddCommunity(view);
+            }
+        });
+        }
+
+    public void btnAddCommunity (View view){
+
+        Intent intent = new Intent(this, YourBadges.class);
+        startActivity(intent);
     }
 
     public void btnNextAvailableBdg (View view) {
