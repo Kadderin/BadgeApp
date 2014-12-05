@@ -13,7 +13,8 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/btnYourBadge"
-            android:id="@+id/btnYourBadges" />
+            android:id="@+id/btnYourBadges"
+            android:enabled="false" />
 
         <Button
             style="?android:attr/buttonStyleSmall"
@@ -43,7 +44,8 @@
             android:layout_height="wrap_content"
             android:id="@+id/editTxtUserName"
             android:layout_marginLeft="10dp"
-            android:layout_span="2" />
+            android:layout_span="2"
+            android:inputType="textPersonName"/>
     </TableRow>
 
     <TableRow android:layout_marginTop="15dp"
@@ -63,7 +65,8 @@
             android:layout_height="wrap_content"
             android:id="@+id/editTxtPassword"
             android:layout_marginLeft="10dp"
-            android:layout_span="2" />
+            android:layout_span="2"
+            android:inputType="textPassword"/>
     </TableRow>
 
     <TableRow android:id="@+id/tblRowSubmit">

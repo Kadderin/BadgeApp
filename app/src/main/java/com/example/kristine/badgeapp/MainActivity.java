@@ -51,7 +51,12 @@ public class MainActivity extends Activity {
                 }
                 else if(username.length()>=5 || username.length()<=15){
                     stringUsername=username.getText().toString();
-                    ((Button) findViewById(R.id.btnYourBadges)).setText(stringUsername+"'s Badges");
+                    String str = stringUsername;
+                    String cap = str.substring(0,1).toUpperCase()+str.substring(1);
+
+                    ((Button) findViewById(R.id.btnYourBadges)).setText(cap+"'s Badges");
+
+
                 }
 
                 if(password.length()<=4){
@@ -66,7 +71,7 @@ public class MainActivity extends Activity {
                     findViewById(R.id.editTxtPassword).setVisibility(view.GONE);
                     findViewById(R.id.btnSubmit).setVisibility(view.GONE);
 
-                    
+                    findViewById(R.id.btnYourBadges).setEnabled(true);
 
                 }
 
