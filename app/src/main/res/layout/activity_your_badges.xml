@@ -28,11 +28,24 @@
         android:layout_width="fill_parent"
         android:layout_height="fill_parent">
 
+        <ImageView
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:id="@+id/imgCommunity2"
+            android:background="@drawable/community"
+            android:visibility="invisible"
+            android:baselineAlignBottom="false" />
+
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Badge1"
-            android:id="@+id/txtViewBdg" />
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="Community Service"
+            android:id="@+id/txtViewCommunity"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="20dp"
+            android:textStyle="italic" />
+
     </TableRow>
 
     <TableRow
@@ -40,11 +53,49 @@
         android:layout_width="fill_parent"
         android:layout_height="fill_parent">
 
+        <ImageView
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:id="@+id/imgAcademicAward2"
+            android:layout_column="0"
+            android:visibility="invisible"
+            android:background="@drawable/academicaward" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="Academic Award"
+            android:id="@+id/txtViewAcademicAward"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="20dp"
+            android:textStyle="italic"
+            android:layout_column="1" />
+
     </TableRow>
 
     <TableRow
         android:layout_width="fill_parent"
         android:layout_height="fill_parent">
+
+        <ImageView
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:id="@+id/imgDeansList2"
+            android:layout_column="0"
+            android:visibility="invisible"
+            android:background="@drawable/deanslist" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="Dean&apos;s List"
+            android:id="@+id/txtViewDeanList"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="20dp"
+            android:textStyle="italic"
+            android:layout_column="1" />
 
     </TableRow>
 
