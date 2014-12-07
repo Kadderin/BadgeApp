@@ -6,6 +6,7 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.content.Intent;
 import android.view.View;
+import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 
@@ -19,11 +20,12 @@ public class YourBadges extends Activity {
         //Gets the Intent from the AvailableBadges class --> Intent.putExtra("state",0)
         //Switched the visibility if state has been assigned to '0'.
         Intent intent = getIntent();
-        int state = Integer.parseInt(intent.getExtras().get("state").toString());
 
+        //int state = Integer.parseInt(intent.getExtras().get("state").toString());
+        int state = intent.getIntExtra("state",0);
+        Button btnBack = (Button) findViewById(R.id.btnBack);
         ImageView image =(ImageView) findViewById(R.id.imgCommunity2);
         TextView name =(TextView) findViewById(R.id.txtViewCommunity);
-
         if(state == 0) {
             image.setVisibility(View.VISIBLE);
             name.setVisibility(View.VISIBLE);
@@ -32,6 +34,20 @@ public class YourBadges extends Activity {
             image.setVisibility(View.INVISIBLE);
             name.setVisibility(View.INVISIBLE);
         }
+
+        btnBack.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                btnGoBack(view);
+            }
+        });
+
+    }
+
+    public void btnGoBack (View view){
+        Intent intentAvailableBadges = new Intent(this,AvailableBadges.class);
+        startActivity(intentAvailableBadges);
+
     }
 
     @Override

@@ -15,18 +15,17 @@ public class AvailableBadges extends Activity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_available_badges);
         //Intent intent = getIntent();
-        Button btnMyBadges = (Button) findViewById(R.id.btnMyBadges);
+        Button btnMyBdg = (Button) findViewById(R.id.btnMyBadges_Avail);
         Button btnNext = (Button) findViewById(R.id.btnNextAvailableBdg);
         Button btnCommunity = (Button) findViewById(R.id.btnAddCommunity);
         Button btnAcademic = (Button) findViewById(R.id.btnAddAcademicAward);
 
-        btnMyBadges.setOnClickListener(new View.OnClickListener() {
+        btnMyBdg.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 btnGoToMyBadges(view);
             }
         });
-
         btnNext.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -42,17 +41,16 @@ public class AvailableBadges extends Activity {
         });
         }
 
-    public  void btnGoToMyBadges(View view){
-        Intent intent = new Intent(this,YourBadges.class);
-        startActivity(intent);
-    }
 
     public void btnAddCommunity (View view){
         Intent intent = new Intent(this, YourBadges.class);
         intent.putExtra("state",0);
         startActivity(intent);
     }
-
+    public void btnGoToMyBadges(View view){
+        Intent intentMyBadges = new Intent (this, YourBadges.class);
+        startActivity(intentMyBadges);
+    }
     public void btnNextAvailableBdg (View view) {
 
         Intent intent = new Intent(this, AvailableBadgesPg2.class);

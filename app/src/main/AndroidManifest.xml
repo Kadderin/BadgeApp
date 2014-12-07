@@ -18,7 +18,7 @@
         </activity>
         <activity
             android:name="com.example.kristine.badgeapp.AvailableBadges"
-            android:label="@string/title_activity_your_badges" >
+            android:label="@string/title_activity_available_badges" >
         </activity>
         <activity
             android:name="com.example.kristine.badgeapp.AvailableBadgesPg2"

@@ -11,6 +11,7 @@
     <string name="txtViewPassword">Password:</string>
     <string name="btnSubmit">Submit</string>
     <string name="title_activity_your_badges">YourBadges</string>
+    <string name="title_activity_available_badges">AvailableBadges</string>
     <string name="txtViewAvailable">Available Badges</string>
     <string name="title_activity_available_badges_pg2">AvailableBadgesPg2</string>
 
