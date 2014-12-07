@@ -42,6 +42,7 @@
             android:textAppearance="?android:attr/textAppearanceMedium"
             android:text="Community Service"
             android:id="@+id/txtViewCommunity"
+            android:visibility="invisible"
             android:layout_gravity="center_vertical"
             android:layout_marginLeft="20dp"
             android:textStyle="italic" />
@@ -67,6 +68,7 @@
             android:textAppearance="?android:attr/textAppearanceMedium"
             android:text="Academic Award"
             android:id="@+id/txtViewAcademicAward"
+            android:visibility="invisible"
             android:layout_gravity="center_vertical"
             android:layout_marginLeft="20dp"
             android:textStyle="italic"
@@ -92,6 +94,7 @@
             android:textAppearance="?android:attr/textAppearanceMedium"
             android:text="Dean&apos;s List"
             android:id="@+id/txtViewDeanList"
+            android:visibility="invisible"
             android:layout_gravity="center_vertical"
             android:layout_marginLeft="20dp"
             android:textStyle="italic"

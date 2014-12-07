@@ -4,7 +4,10 @@ import android.app.Activity;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
-
+import android.content.Intent;
+import android.view.View;
+import android.widget.ImageView;
+import android.widget.TextView;
 
 public class YourBadges extends Activity {
 
@@ -12,8 +15,24 @@ public class YourBadges extends Activity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_your_badges);
-    }
 
+        //Gets the Intent from the AvailableBadges class --> Intent.putExtra("state",0)
+        //Switched the visibility if state has been assigned to '0'.
+        Intent intent = getIntent();
+        int state = Integer.parseInt(intent.getExtras().get("state").toString());
+
+        ImageView image =(ImageView) findViewById(R.id.imgCommunity2);
+        TextView name =(TextView) findViewById(R.id.txtViewCommunity);
+
+        if(state == 0) {
+            image.setVisibility(View.VISIBLE);
+            name.setVisibility(View.VISIBLE);
+        }
+        else{
+            image.setVisibility(View.INVISIBLE);
+            name.setVisibility(View.INVISIBLE);
+        }
+    }
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {

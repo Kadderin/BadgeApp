@@ -1,13 +1,12 @@
 package com.example.kristine.badgeapp;
-
 import android.app.Activity;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
-import  android.content.Intent;
+import android.content.Intent;
 import android.view.View;
 import android.widget.Button;
-
+import android.widget.ImageView;
 
 public class AvailableBadges extends Activity {
 
@@ -19,6 +18,7 @@ public class AvailableBadges extends Activity {
         Button btnMyBadges = (Button) findViewById(R.id.btnMyBadges);
         Button btnNext = (Button) findViewById(R.id.btnNextAvailableBdg);
         Button btnCommunity = (Button) findViewById(R.id.btnAddCommunity);
+        Button btnAcademic = (Button) findViewById(R.id.btnAddAcademicAward);
 
         btnMyBadges.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -41,13 +41,15 @@ public class AvailableBadges extends Activity {
             }
         });
         }
+
     public  void btnGoToMyBadges(View view){
         Intent intent = new Intent(this,YourBadges.class);
         startActivity(intent);
     }
-    public void btnAddCommunity (View view){
 
+    public void btnAddCommunity (View view){
         Intent intent = new Intent(this, YourBadges.class);
+        intent.putExtra("state",0);
         startActivity(intent);
     }
 
@@ -56,7 +58,6 @@ public class AvailableBadges extends Activity {
         Intent intent = new Intent(this, AvailableBadgesPg2.class);
         startActivity(intent);
     }
-
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
