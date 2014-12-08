@@ -13,13 +13,13 @@ public class AvailableBadges extends Activity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        //Finding the views by their ID
         setContentView(R.layout.activity_available_badges);
-        //Intent intent = getIntent();
         Button btnMyBdg = (Button) findViewById(R.id.btnMyBadges_Avail);
         Button btnNext = (Button) findViewById(R.id.btnNextAvailableBdg);
         Button btnCommunity = (Button) findViewById(R.id.btnAddCommunity);
         Button btnAcademic = (Button) findViewById(R.id.btnAddAcademicAward);
-
+        //Setting on click listeners for the buttons
         btnMyBdg.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -41,16 +41,18 @@ public class AvailableBadges extends Activity {
         });
         }
 
-
+    //called when the user presses the add button for the Community badge
     public void btnAddCommunity (View view){
         Intent intent = new Intent(this, YourBadges.class);
         intent.putExtra("state",0);
         startActivity(intent);
     }
+    //called when the user selects the My Badges button
     public void btnGoToMyBadges(View view){
         Intent intentMyBadges = new Intent (this, YourBadges.class);
         startActivity(intentMyBadges);
     }
+    //called when the user selects the next button to switch to the second "My Badges" page
     public void btnNextAvailableBdg (View view) {
 
         Intent intent = new Intent(this, AvailableBadgesPg2.class);

@@ -17,15 +17,14 @@ public class YourBadges extends Activity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_your_badges);
 
-        //Gets the Intent from the AvailableBadges class --> Intent.putExtra("state",0)
-        //Switched the visibility if state has been assigned to '0'.
+        //Gets the Intent from the AvailableBadges class --> Intent.putIntExtra("state",0)
         Intent intent = getIntent();
-
-        //int state = Integer.parseInt(intent.getExtras().get("state").toString());
         int state = intent.getIntExtra("state",0);
+        //finding views by their IDs
         Button btnBack = (Button) findViewById(R.id.btnBack);
         ImageView image =(ImageView) findViewById(R.id.imgCommunity2);
         TextView name =(TextView) findViewById(R.id.txtViewCommunity);
+        //Switched the visibility if state has been assigned to '0'.
         if(state == 0) {
             image.setVisibility(View.VISIBLE);
             name.setVisibility(View.VISIBLE);
@@ -34,7 +33,7 @@ public class YourBadges extends Activity {
             image.setVisibility(View.INVISIBLE);
             name.setVisibility(View.INVISIBLE);
         }
-
+        //on click listerners for buttons
         btnBack.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -43,7 +42,7 @@ public class YourBadges extends Activity {
         });
 
     }
-
+    //called when the back button is pressed by the user
     public void btnGoBack (View view){
         Intent intentAvailableBadges = new Intent(this,AvailableBadges.class);
         startActivity(intentAvailableBadges);

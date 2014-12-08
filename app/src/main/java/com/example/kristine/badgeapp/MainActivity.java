@@ -20,17 +20,19 @@ public class MainActivity extends Activity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-
+        //setting up the Username
         username=(EditText) findViewById(R.id.editTxtUserName);
         stringUsername = username.getText().toString();
-
+        //setting up the Password
         password=(EditText) findViewById(R.id.editTxtPassword);
         stringPassword = password.getText().toString();
 
+        //finding the buttons by their ID
         final Button btnMyBadges = (Button) findViewById(R.id.btnYourBadges);
         final Button btnSubmit = (Button) findViewById(R.id.btnSubmit);
-        ;
         Button btn = (Button) findViewById(R.id.btnAvailableBdg);
+
+        //onClickListeners for the buttons
         btnMyBadges.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -46,25 +48,24 @@ public class MainActivity extends Activity {
         btnSubmit.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                //Username validation is incorrect
                 if(username.length()>15 || username.length()<=4){
                     username.setError("Please enter a username between 5-15 characters");
                 }
+                //When username is accepted the name is set to the Badges button and capitalized properly
                 else if(username.length()>=5 || username.length()<=15){
                     stringUsername=username.getText().toString();
                     String str = stringUsername;
                     String cap = str.substring(0,1).toUpperCase()+str.substring(1);
-
                     ((Button) findViewById(R.id.btnYourBadges)).setText(cap+"'s Badges");
-
-
                 }
-
+                //Password validation incorrect
                 if(password.length()<=4){
                     password.setError("Please enter a password between 5-15 characters");
                 }
                 else if(password.length()>=5 || password.length()<=15){
                     stringPassword=password.getText().toString();
-
+                //When password is accepted the login disappears
                     findViewById(R.id.txtViewUserName).setVisibility(view.GONE);
                     findViewById(R.id.txtViewPassword).setVisibility(view.GONE);
                     findViewById(R.id.editTxtUserName).setVisibility(view.GONE);
@@ -73,13 +74,11 @@ public class MainActivity extends Activity {
 
                     findViewById(R.id.btnYourBadges).setEnabled(true);
                     findViewById(R.id.btnAvailableBdg).setEnabled(true);
-
                 }
-
             }
         });
     }
-
+    //called when a user clicks the Your Badges button
     public  void btnYourBadges (View view){
         Intent intent = new Intent(this,YourBadges.class);
         startActivity(intent);

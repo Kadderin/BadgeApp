@@ -13,11 +13,11 @@ public class AvailableBadgesPg2 extends Activity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
-        //Intent intent = getIntent();
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_available_badges_pg2);
-
+        //finding views by their IDs
         Button btn = (Button) findViewById(R.id.btnBackAvailableBdg2);
+        //setting on click listenres for the buttons
         btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -25,7 +25,7 @@ public class AvailableBadgesPg2 extends Activity {
             }
         });
     }
-
+    //called when the back button is pressed by the user
     public void btnBackAvailableBdg2 (View view) {
 
         Intent intent = new Intent(this, AvailableBadges.class);
