@@ -9,12 +9,15 @@ import android.widget.Button;
 import android.widget.ImageView;
 
 public class AvailableBadges extends Activity {
-
+    int[] statusArray;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        //Finding the views by their ID
         setContentView(R.layout.activity_available_badges);
+
+        Intent intent = getIntent();
+        statusArray = intent.getIntArrayExtra("status_Array");
+        //Finding the views by their ID
         Button btnMyBdg = (Button) findViewById(R.id.btnMyBadges_Avail);
         Button btnNext = (Button) findViewById(R.id.btnNextAvailableBdg);
         Button btnCommunity = (Button) findViewById(R.id.btnAddCommunity);
@@ -39,23 +42,40 @@ public class AvailableBadges extends Activity {
                 btnAddCommunity(view);
             }
         });
+        btnAcademic.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                btnAddAcademic(view);
+            }
+        });
         }
+
 
     //called when the user presses the add button for the Community badge
     public void btnAddCommunity (View view){
         Intent intent = new Intent(this, YourBadges.class);
-        intent.putExtra("state",0);
+        statusArray[0]=1;
+        intent.putExtra("status_Array",statusArray);
+        //intent.putExtra("state",0);
+        startActivity(intent);
+    }
+    public void btnAddAcademic (View view){
+        Intent intent = new Intent(this, YourBadges.class);
+        statusArray[1]=1;
+        intent.putExtra("status_Array",statusArray);
         startActivity(intent);
     }
     //called when the user selects the My Badges button
     public void btnGoToMyBadges(View view){
         Intent intentMyBadges = new Intent (this, YourBadges.class);
+        intentMyBadges.putExtra("status_Array",statusArray);
         startActivity(intentMyBadges);
     }
     //called when the user selects the next button to switch to the second "My Badges" page
     public void btnNextAvailableBdg (View view) {
 
         Intent intent = new Intent(this, AvailableBadgesPg2.class);
+        intent.putExtra("status_Array",statusArray);
         startActivity(intent);
     }
 

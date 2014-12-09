@@ -14,12 +14,14 @@ public class MainActivity extends Activity {
     String stringUsername;
     EditText password;
     String stringPassword;
+    String[] arrayOfBadges;
+    public int[] stateArray;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-
+        initializeArrays();
         //setting up the Username
         username=(EditText) findViewById(R.id.editTxtUserName);
         stringUsername = username.getText().toString();
@@ -78,16 +80,33 @@ public class MainActivity extends Activity {
             }
         });
     }
+//for states 0 = inactive 1 = active
+    private void initializeArrays(){
+        arrayOfBadges = new String[6];
+        stateArray = new int[6];
+        for (int i = 0; i<6; i++){
+            stateArray[i]=0;
+        }
+        arrayOfBadges[0] = "Community";
+        arrayOfBadges[1] = "Academic";
+        arrayOfBadges[2] = "Dean";
+        arrayOfBadges[3] = "Honor";
+        arrayOfBadges[4] = "Abroad";
+        arrayOfBadges[5] = "Graduation";
+
+
+    }
     //called when a user clicks the Your Badges button
     public  void btnYourBadges (View view){
         Intent intent = new Intent(this,YourBadges.class);
+        intent.putExtra("status_Array",stateArray);
         startActivity(intent);
     }
 
     /** Called when the user clicks the availableBdg button */
     public void btnAvailableBadges (View view) {
-
         Intent intent = new Intent(this, AvailableBadges.class);
+        intent.putExtra("status_Array",stateArray);
         startActivity(intent);
     }
 

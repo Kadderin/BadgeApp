@@ -11,7 +11,7 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 public class YourBadges extends Activity {
-
+    int[] statusArray;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -19,21 +19,32 @@ public class YourBadges extends Activity {
 
         //Gets the Intent from the AvailableBadges class --> Intent.putIntExtra("state",0)
         Intent intent = getIntent();
-        int state = intent.getIntExtra("state",1);
+        statusArray = intent.getIntArrayExtra("status_Array");
+        //int state = intent.getIntExtra("state",1);
+
         //finding views by their IDs
         Button btnBack = (Button) findViewById(R.id.btnBack);
         ImageView image =(ImageView) findViewById(R.id.imgCommunity2);
         TextView name =(TextView) findViewById(R.id.txtViewCommunity);
         //Switched the visibility if state has been assigned to '0'.
-        if(state==1){
+        //if(state==1){
 
-        }
-        if(state==0) {
+        //}
+        //if(state==0) {
+           // image.setVisibility(View.VISIBLE);
+          //  name.setVisibility(View.VISIBLE);
+      //  }
+        if (statusArray[0]==1){
             image.setVisibility(View.VISIBLE);
             name.setVisibility(View.VISIBLE);
         }
-
-        //on click listerners for buttons
+        if (statusArray[1]==1){
+            image = (ImageView) findViewById(R.id.imgAcademicAward2);
+            name = (TextView) findViewById(R.id.txtViewAcademicAward);
+            image.setVisibility(View.VISIBLE);
+            name.setVisibility(View.VISIBLE);
+        }
+        //on click listeners for buttons
         btnBack.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -45,6 +56,7 @@ public class YourBadges extends Activity {
     //called when the back button is pressed by the user
     public void btnGoBack (View view){
         Intent intentAvailableBadges = new Intent(this,AvailableBadges.class);
+        intentAvailableBadges.putExtra("status_Array",statusArray);
         startActivity(intentAvailableBadges);
 
     }
