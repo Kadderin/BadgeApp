@@ -19,20 +19,20 @@ public class YourBadges extends Activity {
 
         //Gets the Intent from the AvailableBadges class --> Intent.putIntExtra("state",0)
         Intent intent = getIntent();
-        int state = intent.getIntExtra("state",0);
+        int state = intent.getIntExtra("state",1);
         //finding views by their IDs
         Button btnBack = (Button) findViewById(R.id.btnBack);
         ImageView image =(ImageView) findViewById(R.id.imgCommunity2);
         TextView name =(TextView) findViewById(R.id.txtViewCommunity);
         //Switched the visibility if state has been assigned to '0'.
-        if(state == 0) {
+        if(state==1){
+
+        }
+        if(state==0) {
             image.setVisibility(View.VISIBLE);
             name.setVisibility(View.VISIBLE);
         }
-        else{
-            image.setVisibility(View.INVISIBLE);
-            name.setVisibility(View.INVISIBLE);
-        }
+
         //on click listerners for buttons
         btnBack.setOnClickListener(new View.OnClickListener() {
             @Override

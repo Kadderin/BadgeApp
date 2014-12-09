@@ -40,12 +40,12 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textAppearance="?android:attr/textAppearanceMedium"
-            android:text="Community Service"
             android:id="@+id/txtViewCommunity"
             android:visibility="invisible"
             android:layout_gravity="center_vertical"
             android:layout_marginLeft="20dp"
-            android:textStyle="italic" />
+            android:textStyle="italic"
+            android:text="Community Service" />
 
     </TableRow>
 
