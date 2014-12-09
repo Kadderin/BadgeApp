@@ -1,83 +1,77 @@
 package com.example.kristine.badgeapp;
 
 import android.app.Activity;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
-import android.content.Intent;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-public class YourBadges extends Activity {
-    int[] statusArray;
+
+public class YourBadges2 extends Activity {
+int[] statusArray;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_your_badges);
+        setContentView(R.layout.activity_your_badges2);
 
-        //Gets the Intent from the AvailableBadges class --> Intent.putIntExtra("state",0)
         Intent intent = getIntent();
         statusArray = intent.getIntArrayExtra("status_Array");
-        //int state = intent.getIntExtra("state",1);
 
-        //finding views by their IDs
+        ImageView image =(ImageView) findViewById(R.id.imgSociety2);
+        TextView name =(TextView) findViewById(R.id.txtViewHonorSociety);
         Button btnBack = (Button) findViewById(R.id.btnBack);
-        final Button btnNext = (Button) findViewById(R.id.btnNext);
-        ImageView image =(ImageView) findViewById(R.id.imgCommunity2);
-        TextView name =(TextView) findViewById(R.id.txtViewCommunity);
+        Button btnPrevious = (Button) findViewById(R.id.btnPrevious);
 
-        if (statusArray[0]==1){
+        if (statusArray[3]==1){
             image.setVisibility(View.VISIBLE);
             name.setVisibility(View.VISIBLE);
         }
-        if (statusArray[1]==1){
-            image = (ImageView) findViewById(R.id.imgAcademicAward2);
-            name = (TextView) findViewById(R.id.txtViewAcademicAward);
+        if (statusArray[4]==1){
+            image = (ImageView) findViewById(R.id.imgAbroad2);
+            name = (TextView) findViewById(R.id.txtViewStudyAbroad);
             image.setVisibility(View.VISIBLE);
             name.setVisibility(View.VISIBLE);
         }
-        if(statusArray[2]==1){
-            image = (ImageView) findViewById(R.id.imgDeansList2);
-            name = (TextView) findViewById(R.id.txtViewDeanList);
+        if(statusArray[5]==1){
+            image = (ImageView) findViewById(R.id.imgGraduation2);
+            name = (TextView) findViewById(R.id.txtViewGraduation);
             image.setVisibility(View.VISIBLE);
             name.setVisibility(View.VISIBLE);
         }
-        //on click listeners for buttons
+
         btnBack.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                btnGoBack(view);
+                btnBackPress(view);
             }
         });
-
-        btnNext.setOnClickListener(new View.OnClickListener() {
+        btnPrevious.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                btnNextBadge(view);
+                btnPreviousPress(view);
             }
         });
-
     }
-    //called when the back button is pressed by the user
-    public void btnGoBack (View view){
-        Intent intentAvailableBadges = new Intent(this,AvailableBadges.class);
-        intentAvailableBadges.putExtra("status_Array",statusArray);
-        startActivity(intentAvailableBadges);
-
-    }
-
-    public void btnNextBadge (View view){
-        Intent intentAvailableBadges = new Intent(this,YourBadges2.class);
+    public void btnBackPress (View view){
+        Intent intentAvailableBadges = new Intent(this,AvailableBadgesPg2.class);
         intentAvailableBadges.putExtra("status_Array",statusArray);
         startActivity(intentAvailableBadges);
     }
+    public void btnPreviousPress(View view){
+        Intent intentAvailableBadges = new Intent(this,YourBadges.class);
+        intentAvailableBadges.putExtra("status_Array",statusArray);
+        startActivity(intentAvailableBadges);
+    }
+
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
-        getMenuInflater().inflate(R.menu.menu_your_badges, menu);
+        getMenuInflater().inflate(R.menu.menu_your_badges2, menu);
         return true;
     }
 

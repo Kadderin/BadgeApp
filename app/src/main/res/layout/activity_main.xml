@@ -38,7 +38,8 @@
             android:id="@+id/txtViewUserName"
             android:textIsSelectable="true"
             android:textSize="15dp"
-            android:layout_gravity="center_vertical" />
+            android:layout_gravity="center_vertical"
+            android:layout_span="1" />
 
         <EditText
             android:layout_width="wrap_content"

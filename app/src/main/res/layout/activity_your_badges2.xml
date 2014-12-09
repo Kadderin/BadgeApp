@@ -4,9 +4,7 @@
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
     android:paddingBottom="@dimen/activity_vertical_margin"
-    tools:context="com.example.kristine.badgeapp.AvailableBadges"
-    android:weightSum="1">
-
+    tools:context="com.example.kristine.badgeapp.YourBadges2">
 
     <TableRow
         android:id="@+id/tblRowAvailable"
@@ -17,22 +15,22 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textAppearance="?android:attr/textAppearanceLarge"
-            android:text="My Badges 1-3"
+            android:text="My Badges (3-6)"
             android:id="@+id/txtViewMyBadges"
             android:layout_column="1"
             android:layout_gravity="center_horizontal" />
     </TableRow>
 
     <TableRow
-        android:id="@+id/tblRowCommunityBdg"
+        android:id="@+id/tblRowSocietyBdg"
         android:layout_width="fill_parent"
         android:layout_height="fill_parent">
 
         <ImageView
             android:layout_width="80dp"
             android:layout_height="80dp"
-            android:id="@+id/imgCommunity2"
-            android:background="@drawable/community"
+            android:id="@+id/imgSociety2"
+            android:background="@drawable/honorsociety"
             android:visibility="invisible"
             android:baselineAlignBottom="false" />
 
@@ -40,34 +38,34 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textAppearance="?android:attr/textAppearanceMedium"
-            android:id="@+id/txtViewCommunity"
+            android:id="@+id/txtViewHonorSociety"
             android:visibility="invisible"
             android:layout_gravity="center_vertical"
             android:layout_marginLeft="20dp"
             android:textStyle="italic"
-            android:text="Community Service" />
+            android:text="Honor Society" />
 
     </TableRow>
 
     <TableRow
-        android:id="@+id/tblRowDescCommunity"
+        android:id="@+id/tblRowStudyAbroad"
         android:layout_width="fill_parent"
         android:layout_height="fill_parent">
 
         <ImageView
             android:layout_width="80dp"
             android:layout_height="80dp"
-            android:id="@+id/imgAcademicAward2"
+            android:id="@+id/imgAbroad2"
             android:layout_column="0"
             android:visibility="invisible"
-            android:background="@drawable/academicaward" />
+            android:background="@drawable/studyabroad" />
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textAppearance="?android:attr/textAppearanceMedium"
-            android:text="Academic Award"
-            android:id="@+id/txtViewAcademicAward"
+            android:text="Study Abroad"
+            android:id="@+id/txtViewStudyAbroad"
             android:visibility="invisible"
             android:layout_gravity="center_vertical"
             android:layout_marginLeft="20dp"
@@ -83,17 +81,17 @@
         <ImageView
             android:layout_width="80dp"
             android:layout_height="80dp"
-            android:id="@+id/imgDeansList2"
+            android:id="@+id/imgGraduation2"
             android:layout_column="0"
             android:visibility="invisible"
-            android:background="@drawable/deanslist" />
+            android:background="@drawable/graduation" />
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textAppearance="?android:attr/textAppearanceMedium"
             android:text="Dean&apos;s List"
-            android:id="@+id/txtViewDeanList"
+            android:id="@+id/txtViewGraduation"
             android:visibility="invisible"
             android:layout_gravity="center_vertical"
             android:layout_marginLeft="20dp"
@@ -109,15 +107,15 @@
         <Button
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Back"
-            android:id="@+id/btnBack"
+            android:text="Previous Badges"
+            android:id="@+id/btnPrevious"
             android:layout_column="1" />
 
         <Button
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Next"
-            android:id="@+id/btnNext"
+            android:text="Back"
+            android:id="@+id/btnBack"
             android:layout_column="6" />
     </TableRow>
 

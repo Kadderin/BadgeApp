@@ -22,6 +22,7 @@ public class AvailableBadges extends Activity {
         Button btnNext = (Button) findViewById(R.id.btnNextAvailableBdg);
         Button btnCommunity = (Button) findViewById(R.id.btnAddCommunity);
         Button btnAcademic = (Button) findViewById(R.id.btnAddAcademicAward);
+        Button btnDean = (Button) findViewById(R.id.btnAddDeansList);
         //Setting on click listeners for the buttons
         btnMyBdg.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -48,6 +49,12 @@ public class AvailableBadges extends Activity {
                 btnAddAcademic(view);
             }
         });
+        btnDean.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                btnAddDean(view);
+            }
+        });
         }
 
 
@@ -62,6 +69,12 @@ public class AvailableBadges extends Activity {
     public void btnAddAcademic (View view){
         Intent intent = new Intent(this, YourBadges.class);
         statusArray[1]=1;
+        intent.putExtra("status_Array",statusArray);
+        startActivity(intent);
+    }
+    public void btnAddDean(View view){
+        Intent intent = new Intent(this, YourBadges.class);
+        statusArray[2]=1;
         intent.putExtra("status_Array",statusArray);
         startActivity(intent);
     }

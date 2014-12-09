@@ -10,25 +10,68 @@ import android.widget.Button;
 import android.widget.ImageView;
 
 public class AvailableBadgesPg2 extends Activity {
-
+int[] statusArray;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_available_badges_pg2);
+        Intent intent = getIntent();
+        statusArray = intent.getIntArrayExtra("status_Array");
         //finding views by their IDs
+        final Button btnAddHonor = (Button) findViewById(R.id.btnAddHonorSociety);
+        final Button btnAddAbroad = (Button) findViewById(R.id.btnAddAbroad);
+        Button btnAddGraduation = (Button) findViewById(R.id.btnAddGraduation);
+
         Button btn = (Button) findViewById(R.id.btnBackAvailableBdg2);
-        //setting on click listenres for the buttons
+        //setting on click listeners for the buttons
         btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 btnBackAvailableBdg2(view);
             }
         });
+        btnAddHonor.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                btnAddHonorPress(view);
+            }
+        });
+        btnAddAbroad.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                btnAddAbroadPress(view);
+            }
+        });
+        btnAddGraduation.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                btnAddGraduationPress(view);
+            }
+        });
     }
     //called when the back button is pressed by the user
     public void btnBackAvailableBdg2 (View view) {
 
-        Intent intent = new Intent(this, AvailableBadges.class);
+        Intent intentMyBadges = new Intent (this, AvailableBadges.class);
+        intentMyBadges.putExtra("status_Array",statusArray);
+        startActivity(intentMyBadges);
+    }
+    public void btnAddHonorPress (View view){
+        Intent intent = new Intent(this, YourBadges2.class);
+        statusArray[3]=1;
+        intent.putExtra("status_Array",statusArray);
+        startActivity(intent);
+    }
+    public void btnAddAbroadPress (View view){
+        Intent intent = new Intent(this, YourBadges2.class);
+        statusArray[4]=1;
+        intent.putExtra("status_Array",statusArray);
+        startActivity(intent);
+    }
+    public void btnAddGraduationPress(View view){
+        Intent intent = new Intent(this, YourBadges2.class);
+        statusArray[5]=1;
+        intent.putExtra("status_Array",statusArray);
         startActivity(intent);
     }
 

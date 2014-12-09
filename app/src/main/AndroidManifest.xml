@@ -28,6 +28,10 @@
             android:name="com.example.kristine.badgeapp.YourBadges"
             android:label="@string/title_activity_your_badges" >
         </activity>
+        <activity
+            android:name="com.example.kristine.badgeapp.YourBadges2"
+            android:label="@string/title_activity_your_badges2" >
+        </activity>
     </application>
 
 </manifest>

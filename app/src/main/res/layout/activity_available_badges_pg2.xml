@@ -83,7 +83,7 @@
         <ImageView
             android:layout_width="80dp"
             android:layout_height="80dp"
-            android:id="@+id/imgAcademicAward"
+            android:id="@+id/imgAbroad"
             android:layout_column="0"
             android:background="@drawable/studyabroad" />
 
@@ -108,7 +108,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Add"
-            android:id="@+id/btnAddAcademicAward"
+            android:id="@+id/btnAddAbroad"
             android:layout_column="0"
             android:width="5dp"
             android:textSize="10dp" />
@@ -133,7 +133,7 @@
         <ImageView
             android:layout_width="80dp"
             android:layout_height="80dp"
-            android:id="@+id/imgDeansList"
+            android:id="@+id/imgGraduation"
             android:layout_column="0"
             android:background="@drawable/graduation" />
 
@@ -158,7 +158,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Add"
-            android:id="@+id/btnAddDeansList"
+            android:id="@+id/btnAddGraduation"
             android:layout_column="0"
             android:width="5dp"
             android:textSize="10dp" />
