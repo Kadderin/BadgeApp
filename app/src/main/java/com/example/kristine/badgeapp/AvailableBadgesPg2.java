@@ -21,9 +21,15 @@ int[] statusArray;
         final Button btnAddHonor = (Button) findViewById(R.id.btnAddHonorSociety);
         final Button btnAddAbroad = (Button) findViewById(R.id.btnAddAbroad);
         Button btnAddGraduation = (Button) findViewById(R.id.btnAddGraduation);
-
+        Button btnMyBadges = (Button) findViewById(R.id.btnMyBadges);
         Button btn = (Button) findViewById(R.id.btnBackAvailableBdg2);
         //setting on click listeners for the buttons
+        btnMyBadges.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                btnMyBadgesPress(view);
+            }
+        });
         btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -50,6 +56,11 @@ int[] statusArray;
         });
     }
     //called when the back button is pressed by the user
+    public void btnMyBadgesPress(View view){
+        Intent intentMyBadges = new Intent (this, YourBadges2.class);
+        intentMyBadges.putExtra("status_Array",statusArray);
+        startActivity(intentMyBadges);
+    }
     public void btnBackAvailableBdg2 (View view) {
 
         Intent intentMyBadges = new Intent (this, AvailableBadges.class);
