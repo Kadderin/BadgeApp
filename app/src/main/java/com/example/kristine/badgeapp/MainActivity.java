@@ -60,7 +60,7 @@ public class MainActivity extends Activity {
                     stringUsername=username.getText().toString();
                     String str = stringUsername;
                     String cap = str.substring(0,1).toUpperCase()+str.substring(1);
-                    ((Button) findViewById(R.id.btnYourBadges)).setText(cap+"'s Badges");
+                    ((Button) findViewById(R.id.btnYourBadges)).setText(cap+"'s Earned Badges");
 
 
                 }
@@ -76,7 +76,8 @@ public class MainActivity extends Activity {
                     findViewById(R.id.editTxtUserName).setVisibility(view.GONE);
                     findViewById(R.id.editTxtPassword).setVisibility(view.GONE);
                     findViewById(R.id.btnSubmit).setVisibility(view.GONE);
-
+                    findViewById(R.id.txtViewWelcome).setVisibility(view.VISIBLE);
+                    findViewById(R.id.txtViewHelp).setVisibility(view.VISIBLE);
                     findViewById(R.id.btnYourBadges).setEnabled(true);
                     findViewById(R.id.btnAvailableBdg).setEnabled(true);
                 }
