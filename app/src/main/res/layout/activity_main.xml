@@ -78,18 +78,15 @@
         android:layout_marginTop="30dp"
         android:width="700dp" />
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Welcome to the Badge App!"
-        android:textAppearance="?android:attr/textAppearanceLarge"
-        android:textStyle="bold"
-        android:id="@+id/txtViewWelcome"
+    <ImageView
+        android:layout_width="250dp"
+        android:layout_height="150dp"
+        android:id="@+id/imageView"
+        android:background="@drawable/welcomebadge"
+        android:layout_marginLeft="50dp"
         android:visibility="invisible"
-        android:layout_span="1"
-        android:layout_column="0"
-        android:width="700dp"
-        android:layout_marginLeft="40dp" />
+        android:paddingTop="0dp"
+        android:layout_marginTop="50dp" />
 
     <TextView
         android:layout_width="wrap_content"
@@ -98,7 +95,8 @@
         android:text="To start view your earned badges or begin collecting badges from available badges"
         android:id="@+id/txtViewHelp"
         android:visibility="invisible"
-        android:paddingTop="10dp" />
+        android:paddingTop="10dp"
+        android:layout_marginTop="50dp" />
 
 
 </LinearLayout>

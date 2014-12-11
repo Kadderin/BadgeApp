@@ -109,14 +109,16 @@
             android:layout_height="wrap_content"
             android:text="Previous Badges"
             android:id="@+id/btnPrevious"
-            android:layout_column="1" />
+            android:layout_column="1"
+            android:layout_marginTop="150dp" />
 
         <Button
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Back"
             android:id="@+id/btnBack"
-            android:layout_column="6" />
+            android:layout_column="6"
+            android:layout_marginTop="150dp" />
     </TableRow>
 
 </TableLayout>

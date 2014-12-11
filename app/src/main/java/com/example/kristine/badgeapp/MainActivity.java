@@ -76,8 +76,10 @@ public class MainActivity extends Activity {
                     findViewById(R.id.editTxtUserName).setVisibility(view.GONE);
                     findViewById(R.id.editTxtPassword).setVisibility(view.GONE);
                     findViewById(R.id.btnSubmit).setVisibility(view.GONE);
-                    findViewById(R.id.txtViewWelcome).setVisibility(view.VISIBLE);
+
                     findViewById(R.id.txtViewHelp).setVisibility(view.VISIBLE);
+                    findViewById(R.id.imageView).setVisibility(view.VISIBLE);
+
                     findViewById(R.id.btnYourBadges).setEnabled(true);
                     findViewById(R.id.btnAvailableBdg).setEnabled(true);
                 }
