@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-
     <string name="app_name">BadgeApp</string>
     <string name="hello_world">Hello world!</string>
     <string name="action_settings">Settings</string>
@@ -16,5 +15,20 @@
     <string name="title_activity_available_badges_pg2">AvailableBadgesPg2</string>
     <string name="title_activity_your_badges2">YourBadges2</string>
     <string name="btnYourBadges">Your Earned Badges</string>
+    <!--Activity_Available_Badges-->
+    <string name="txtViewCommunity">Community Service</string>
+    <string name="txtViewDescCommunity">Complete any community service to earn this badge!</string>
+    <string name="txtViewAcademicAward">Academic Award</string>
+    <string name="txtViewAcademicDesc">Complete any academic award to earn this badge!</string>
+    <!--Activity_Available_Badges_pg2-->
+    <string name="txtViewHonorSociety">Honor Society</string>
+    <string name="txtViewDescHonorSociety">Be placed in the honor society to earn this badge!</string>
+    <string name="txtViewStudyAbroad">Study Abroad</string>
+    <string name="txtViewStudyAbroadDesc">Complete a study abroad experience to earn this badge!</string>
+    <string name="txtViewGraduation">Graduation</string>
+    <string name="txtViewGraduationDesc">Graduate with a degree to earn this badge!</string>
+    <string name="txtViewDeanList">Dean\'s List</string>
+    <string name="txtViewDeanListDesc">Be placed on the Dean\'s List to earn this badge!</string>
+
 
 </resources>
