@@ -22,7 +22,7 @@ import com.example.kristine.badgeapp.Badge;
 public class AvailableBadges extends Activity {
     int[] statusArray;
 
-    int idListForImg[] = {      //Stephany Added
+    /*int idListForImg[] = {      //Stephany Added
             R.id.imgAbroad,
             R.id.imgAcademicAward,
             R.id.imgCommunity,
@@ -33,7 +33,7 @@ public class AvailableBadges extends Activity {
     //XmlPullParserFactory factory;      //Stephany Added
     //XmlPullParser parser;      //Stephany Added
     ArrayAdapter<Badge> adapter;      //Stephany Added
-
+*/
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -81,14 +81,14 @@ public class AvailableBadges extends Activity {
             }
         });
 
-        ImgListener listener = new ImgListener();      //Stephany Added
+       /* ImgListener listener = new ImgListener();      //Stephany Added
 
         for(int id: idListForImg) {      //Stephany Added
             ImageView view = (ImageView) findViewById(id);
             view.setOnClickListener(listener);
-        }
+        }*/
     }
-
+/*
     public class ImgListener implements OnClickListener {      //Stephany Added
         @Override
         public void onClick (View view){
@@ -165,7 +165,7 @@ public class AvailableBadges extends Activity {
             alert.show();
         }
     }
-
+*/
 
     //called when the user presses the add button for the Community badge
     public void btnAddCommunity (View view){
