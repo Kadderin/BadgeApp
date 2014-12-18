@@ -20,6 +20,8 @@
     <string name="txtViewDescCommunity">Complete any community service to earn this badge!</string>
     <string name="txtViewAcademicAward">Academic Award</string>
     <string name="txtViewAcademicDesc">Complete any academic award to earn this badge!</string>
+    <string name="txtViewDeanList">Dean\'s List</string>
+    <string name="txtViewDeanListDesc">Be placed on the Dean\'s List to earn this badge!</string>
     <!--Activity_Available_Badges_pg2-->
     <string name="txtViewHonorSociety">Honor Society</string>
     <string name="txtViewDescHonorSociety">Be placed in the honor society to earn this badge!</string>
@@ -27,8 +29,4 @@
     <string name="txtViewStudyAbroadDesc">Complete a study abroad experience to earn this badge!</string>
     <string name="txtViewGraduation">Graduation</string>
     <string name="txtViewGraduationDesc">Graduate with a degree to earn this badge!</string>
-    <string name="txtViewDeanList">Dean\'s List</string>
-    <string name="txtViewDeanListDesc">Be placed on the Dean\'s List to earn this badge!</string>
-
-
 </resources>

@@ -33,6 +33,7 @@
             android:layout_height="80dp"
             android:id="@+id/imgCommunity"
             android:background="@drawable/community"
+            android:clickable="true"
             android:baselineAlignBottom="false" />
 
         <TextView
@@ -85,6 +86,7 @@
             android:layout_height="80dp"
             android:id="@+id/imgAcademicAward"
             android:layout_column="0"
+            android:clickable="true"
             android:background="@drawable/academicaward" />
 
         <TextView
@@ -135,6 +137,7 @@
             android:layout_height="80dp"
             android:id="@+id/imgDeansList"
             android:layout_column="0"
+            android:clickable="true"
             android:background="@drawable/deanslist" />
 
         <TextView

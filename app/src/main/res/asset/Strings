@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>       <!--Stephany Added-->
+<Strings>
+    <string-array name="txtViewBadgeIDs">
+        <item>txtViewCommunity</item>
+        <item>txtViewAcademicAward</item>
+        <item>txtViewDeanList</item>
+        <item>txtViewHonorSociety</item>
+        <item>txtViewStudyAbroad</item>
+        <item>txtViewGraduation</item>
+    </string-array>
+    <!--Activity_Available_Badges-->
+    <string name="txtViewCommunity">Community Service</string>
+    <string name="txtViewAcademicAward">Academic Award</string>
+    <string name="txtViewDeanList">Dean\'s List</string>
+    <!--Activity_Available_Badges_pg2-->
+    <string name="txtViewHonorSociety">Honor Society</string>
+    <string name="txtViewStudyAbroad">Study Abroad</string>
+    <string name="txtViewGraduation">Graduation</string>
+    <!--Activity_Your_Badges-->
+</Strings>

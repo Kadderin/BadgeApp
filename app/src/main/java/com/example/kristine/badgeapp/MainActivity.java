@@ -55,12 +55,12 @@ public class MainActivity extends Activity {
                 if(username.length()>15 || username.length()<=4){
                     username.setError("Please enter a username between 5-15 characters");
                 }
-                //When username is accepted the name is set to the Badges button and capitalized properly
+                //When username is accepted the name is set to the Badge button and capitalized properly
                 else if(username.length()>=5 || username.length()<=15){
                     stringUsername=username.getText().toString();
                     String str = stringUsername;
                     String cap = str.substring(0,1).toUpperCase()+str.substring(1);
-                    ((Button) findViewById(R.id.btnYourBadges)).setText(cap+"'s Earned Badges");
+                    ((Button) findViewById(R.id.btnYourBadges)).setText(cap+"'s Earned Badge");
 
 
                 }
@@ -102,7 +102,7 @@ public class MainActivity extends Activity {
 
 
     }
-    //called when a user clicks the Your Badges button
+    //called when a user clicks the Your Badge button
     public  void btnYourBadges (View view){
         Intent intent = new Intent(this,YourBadges.class);
         intent.putExtra("status_Array",stateArray);

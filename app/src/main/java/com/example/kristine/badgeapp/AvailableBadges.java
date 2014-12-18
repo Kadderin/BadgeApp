@@ -1,15 +1,37 @@
 package com.example.kristine.badgeapp;
 import android.app.Activity;
+import android.app.AlertDialog;
+import android.view.View.OnClickListener;
+import android.content.DialogInterface;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.content.Intent;
 import android.view.View;
+import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.ImageView;
+import org.xmlpull.v1.XmlPullParser;
+import org.xmlpull.v1.XmlPullParserFactory;
+import java.io.InputStream;
+import java.util.List;
 
 public class AvailableBadges extends Activity {
     int[] statusArray;
+
+    /*int idListForImg[] = {      //Stephany Added
+            R.id.imgAbroad,
+            R.id.imgAcademicAward,
+            R.id.imgCommunity,
+            R.id.imgDeansList,
+            R.id.imgGraduation,
+            R.id.imgSociety };
+
+    XmlPullParserFactory factory;      //Stephany Added
+    XmlPullParser parser;      //Stephany Added
+    ArrayAdapter<Badge> adapter;      //Stephany Added
+    */
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -55,8 +77,93 @@ public class AvailableBadges extends Activity {
                 btnAddDean(view);
             }
         });
-        }
 
+        /*ImgListener listener = new ImgListener();      //Stephany Added
+
+        for(int id: idListForImg) {      //Stephany Added
+            ImageView view = (ImageView) findViewById(id);
+            view.setOnClickListener(listener);
+        }*/
+    }
+
+    /*
+    public ArrayAdapter<Badge> parseXML (){      //Stephany Added
+        List<Badge> Badges = null;
+        try {
+            XMLParserHandler parser = new XMLParserHandler();
+            InputStream is = getApplicationContext().getAssets().open("xml/Badges.xml");
+            parser.parse(is);
+            adapter = new ArrayAdapter<Badge>(getApplicationContext(), android.R.layout.simple_list_item_1, Badges);
+            //lv.setAdapter(adapter);
+
+            return adapter;
+        }
+        catch (Exception ex) {
+            ex.printStackTrace();
+        }
+        return null;
+    }
+
+    private void openAlert(View view) {      //Stephany Added
+
+        AlertDialog.Builder builder = new AlertDialog.Builder(getApplicationContext());
+        builder.setTitle("Badge Requirements")
+                .setAdapter(adapter, new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialog, int which) {
+                    }
+                })
+                .setNegativeButton("Ok", null); // nothing simply dismiss
+
+        builder.create();
+
+        AlertDialog alert = builder.create();
+        alert.show();
+    }
+
+    public class ImgListener implements OnClickListener {      //Stephany Added
+        @Override
+        public void onClick (View view){
+
+            for(int id: idListForImg){
+            //android:clickable="true"
+            //0. check which id it is
+            //1. open the xml file
+            //2. get the string id name to requirements
+            //3. open the requirements in a dialog box
+
+                switch (view.getId())
+                {
+                    case R.id.imgAbroad:
+                        id = R.id.imgAbroad;
+                        parseXML();
+                        openAlert(view);
+                        break;
+                    case R.id.imgAcademicAward:
+                        id = R.id.imgAcademicAward;
+                        parseXML();
+                        openAlert(view);                        break;
+                    case R.id.imgCommunity:
+                        id = R.id.imgCommunity;
+                        parseXML();
+                        openAlert(view);                        break;
+                    case R.id.imgDeansList:
+                        id = R.id.imgDeansList;
+                        parseXML();
+                        openAlert(view);                        break;
+                    case R.id.imgGraduation:
+                        id = R.id.imgGraduation;
+                        parseXML();
+                        openAlert(view);                        break;
+                    case R.id.imgSociety:
+                        id = R.id.imgSociety;
+                        parseXML();
+                        openAlert(view);                        break;
+                }
+            }
+        }
+    }
+    */
 
     //called when the user presses the add button for the Community badge
     public void btnAddCommunity (View view){
@@ -78,13 +185,13 @@ public class AvailableBadges extends Activity {
         intent.putExtra("status_Array",statusArray);
         startActivity(intent);
     }
-    //called when the user selects the My Badges button
+    //called when the user selects the My Badge button
     public void btnGoToMyBadges(View view){
         Intent intentMyBadges = new Intent (this, YourBadges.class);
         intentMyBadges.putExtra("status_Array",statusArray);
         startActivity(intentMyBadges);
     }
-    //called when the user selects the next button to switch to the second "My Badges" page
+    //called when the user selects the next button to switch to the second "My Badge" page
     public void btnNextAvailableBdg (View view) {
 
         Intent intent = new Intent(this, AvailableBadgesPg2.class);
