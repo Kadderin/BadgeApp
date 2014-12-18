@@ -16,6 +16,7 @@
     <string name="title_activity_available_badges_pg2">AvailableBadgesPg2</string>
     <string name="title_activity_your_badges2">YourBadges2</string>
     <string name="btnYourBadges">Your Earned Badges</string>
+<<<<<<< HEAD
 <<<<<<< HEAD:app/src/main/res/values/string.xml
     <!--Activity_Available_Badges-->
     <string name="txtViewCommunity">Community Service</string>
@@ -39,6 +40,8 @@
     <string name="txtViewDeanList">Dean\'s List</string>
     <string name="txtViewDeanListDesc">Be placed on the Dean\'s List to earn this badge!</string>
 
+=======
+>>>>>>> parent of 32a4fa1... Pages pull from XML
 
 </resources>
 >>>>>>> parent of e20a517... Tried to add alert dialogs.:app/src/main/res/values/strings.xml
