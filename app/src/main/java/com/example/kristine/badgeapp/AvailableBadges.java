@@ -11,15 +11,18 @@ import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.ImageView;
-import org.xmlpull.v1.XmlPullParser;
-import org.xmlpull.v1.XmlPullParserFactory;
+//import org.xmlpull.v1.XmlPullParser;
+//import org.xmlpull.v1.XmlPullParserFactory;
 import java.io.InputStream;
+import java.util.ArrayList;
 import java.util.List;
+import com.example.kristine.badgeapp.XMLParserHandler;
+import com.example.kristine.badgeapp.Badge;
 
 public class AvailableBadges extends Activity {
     int[] statusArray;
 
-    /*int idListForImg[] = {      //Stephany Added
+    int idListForImg[] = {      //Stephany Added
             R.id.imgAbroad,
             R.id.imgAcademicAward,
             R.id.imgCommunity,
@@ -27,10 +30,10 @@ public class AvailableBadges extends Activity {
             R.id.imgGraduation,
             R.id.imgSociety };
 
-    XmlPullParserFactory factory;      //Stephany Added
-    XmlPullParser parser;      //Stephany Added
+    //XmlPullParserFactory factory;      //Stephany Added
+    //XmlPullParser parser;      //Stephany Added
     ArrayAdapter<Badge> adapter;      //Stephany Added
-    */
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -78,47 +81,12 @@ public class AvailableBadges extends Activity {
             }
         });
 
-        /*ImgListener listener = new ImgListener();      //Stephany Added
+        ImgListener listener = new ImgListener();      //Stephany Added
 
         for(int id: idListForImg) {      //Stephany Added
             ImageView view = (ImageView) findViewById(id);
             view.setOnClickListener(listener);
-        }*/
-    }
-
-    /*
-    public ArrayAdapter<Badge> parseXML (){      //Stephany Added
-        List<Badge> Badges = null;
-        try {
-            XMLParserHandler parser = new XMLParserHandler();
-            InputStream is = getApplicationContext().getAssets().open("xml/Badges.xml");
-            parser.parse(is);
-            adapter = new ArrayAdapter<Badge>(getApplicationContext(), android.R.layout.simple_list_item_1, Badges);
-            //lv.setAdapter(adapter);
-
-            return adapter;
         }
-        catch (Exception ex) {
-            ex.printStackTrace();
-        }
-        return null;
-    }
-
-    private void openAlert(View view) {      //Stephany Added
-
-        AlertDialog.Builder builder = new AlertDialog.Builder(getApplicationContext());
-        builder.setTitle("Badge Requirements")
-                .setAdapter(adapter, new DialogInterface.OnClickListener() {
-                    @Override
-                    public void onClick(DialogInterface dialog, int which) {
-                    }
-                })
-                .setNegativeButton("Ok", null); // nothing simply dismiss
-
-        builder.create();
-
-        AlertDialog alert = builder.create();
-        alert.show();
     }
 
     public class ImgListener implements OnClickListener {      //Stephany Added
@@ -162,8 +130,42 @@ public class AvailableBadges extends Activity {
                 }
             }
         }
+
+        public ArrayAdapter<Badge> parseXML (){      //Stephany Added
+            ArrayList<Badge> Badges = new ArrayList<Badge>();
+            try {
+                XMLParserHandler parser = new XMLParserHandler();
+                InputStream is = getApplicationContext().getAssets().open("xml/Badges.xml");
+                parser.parse(is);
+                adapter = new ArrayAdapter<Badge>(getApplicationContext(), android.R.layout.simple_list_item_1, Badges);
+                //lv.setAdapter(adapter);
+
+                return adapter;
+            }
+            catch (Exception ex) {
+                ex.printStackTrace();
+            }
+            return null;
+        }
+
+        private void openAlert(View view) {      //Stephany Added
+
+            AlertDialog.Builder builder = new AlertDialog.Builder(getApplicationContext());
+            builder.setTitle("Badge Requirements")
+                    .setAdapter(adapter, new DialogInterface.OnClickListener() {
+                        @Override
+                        public void onClick(DialogInterface dialog, int which) {
+                        }
+                    })
+                    .setNegativeButton("Ok", null); // nothing simply dismiss
+
+            builder.create();
+
+            AlertDialog alert = builder.create();
+            alert.show();
+        }
     }
-    */
+
 
     //called when the user presses the add button for the Community badge
     public void btnAddCommunity (View view){
