@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">BadgeApp</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+    <string name="btnHome">Home</string>
+    <string name="btnYourBadge">Your Badges</string>
+    <string name="btnAvailableBdg">Available Badges</string>
+    <string name="txtViewUserName">User Name:</string>
+    <string name="txtViewPassword">Password:</string>
+    <string name="btnSubmit">Submit</string>
+    <string name="title_activity_your_badges">YourBadges</string>
+    <string name="title_activity_available_badges">AvailableBadges</string>
+    <string name="txtViewAvailable">Available Badges</string>
+    <string name="title_activity_available_badges_pg2">AvailableBadgesPg2</string>
+    <string name="title_activity_your_badges2">YourBadges2</string>
+    <string name="btnYourBadges">Your Earned Badges</string>
+<<<<<<< HEAD:app/src/main/res/values/string.xml
+    <!--Activity_Available_Badges-->
+    <string name="txtViewCommunity">Community Service</string>
+    <string name="txtViewDescCommunity">Complete any community service to earn this badge!</string>
+    <string name="txtViewAcademicAward">Academic Award</string>
+    <string name="txtViewAcademicDesc">Complete any academic award to earn this badge!</string>
+    <!--Activity_Available_Badges_pg2-->
+    <string name="txtViewHonorSociety">Honor Society</string>
+    <string name="txtViewDescHonorSociety">Be placed in the honor society to earn this badge!</string>
+    <string name="txtViewStudyAbroad">Study Abroad</string>
+    <string name="txtViewStudyAbroadDesc">Complete a study abroad experience to earn this badge!</string>
+    <string name="txtViewGraduation">Graduation</string>
+    <string name="txtViewGraduationDesc">Graduate with a degree to earn this badge!</string>
+<<<<<<< HEAD:app/src/main/res/values/string.xml
+</resources>
+=======
+
+</resources>
+>>>>>>> parent of 32a4fa1... Pages pull from XML:app/src/main/res/values/strings.xml
+=======
+    <string name="txtViewDeanList">Dean\'s List</string>
+    <string name="txtViewDeanListDesc">Be placed on the Dean\'s List to earn this badge!</string>
+
+
+</resources>
+>>>>>>> parent of e20a517... Tried to add alert dialogs.:app/src/main/res/values/strings.xml
